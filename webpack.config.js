@@ -1,5 +1,5 @@
 const path = require('path');
-const outputDir = path.join(__dirname, "build/");
+const outputDir = path.join(__dirname, 'build/');
 
 const isProd = process.env.NODE_ENV === 'production';
 
@@ -10,5 +10,10 @@ module.exports = {
     path: outputDir,
     publicPath: outputDir,
     filename: 'Index.js',
+  },
+  resolve: {
+    alias: {
+      'react-native': 'react-native-web',
+    },
   },
 };
